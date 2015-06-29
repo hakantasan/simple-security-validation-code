@@ -1,18 +1,13 @@
 <?php
     $girilen_sonuc = $_POST['sonuc'];
-
+    
     session_start();
-
+    
     if($_SESSION['toplama'] != $girilen_sonuc)
-    {
-        $_SESSION['giris'] = "yanlış";
-        header("Location: toplama.php");
-        exit;
-    }
+        $_SESSION['bilgi'] = "Hata";
     else
-    {
-        $_SESSION['giris'] = "doğru";
+        $_SESSION['bilgi'] = "Doğru";
+    
         header("Location: toplama.php");
-        exit;
-    }
+    exit;
 ?>
