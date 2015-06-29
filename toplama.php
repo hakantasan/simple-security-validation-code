@@ -54,16 +54,16 @@
                 <br><br>
                 <div class="mesaj">
                     <?php
-                        if(isset($_SESSION['giris']) && $_SESSION['giris'] == "yanlış")
-						{
+                        if(isset($_SESSION['bilgi']) && $_SESSION['bilgi'] == "Hata")
+			{
                             echo "Güvenlik sorusunu hatalı girdiniz.";
-							unset($_SESSION['giris']);
-						}
-                        else if(isset($_SESSION['giris']) && $_SESSION['giris'] == "doğru")
-						{
+			    unset($_SESSION['bilgi']);
+			}
+                        else if(isset($_SESSION['bilgi']) && $_SESSION['bilgi'] == "Doğru")
+			{
                             echo "Tebrikler, kaydınız tamamlandı.";
-							unset($_SESSION['giris']);
-						}
+			    unset($_SESSION['bilgi']);
+			}
                     ?>
                 </div>
             </form>
